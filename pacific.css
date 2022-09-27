@@ -1,0 +1,130 @@
+header,
+hgroup,
+nav,
+footer,
+figure,
+figcaption,
+aside,
+section,
+article {
+	display: block;
+}
+
+
+
+body {
+	background-image: url('ptrbackground.jpg');
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 600px;
+	width: 80%;
+	background-color: #90C7E3;
+}
+
+h1 {
+	background-color: #000033;
+	background-image: url('sunset.jpg');
+	background-repeat: no-repeat;
+	background-position: right;
+
+	color: white;
+	margin-bottom: 0;
+	padding: 10px;
+}
+
+.resort {
+	color: #096b9c;
+	font-size: 120%;
+	font-style: bold;
+}
+
+img {
+	float: left;
+	position: relative;
+	margin: 0px 20px 0px 20px;
+}
+
+#content {
+	background-color: white;
+	margin-left: 230px;
+	padding: 1px 0px 0px 0px;
+}
+
+#content p {
+	padding: 1px 5px 1px 20px;
+}
+
+#content ul {
+	list-style-image: url('marker.gif');
+	list-style-position: inside;
+	padding: 1px 0px 1px 60px;
+}
+
+#contact {
+	font-size: 90%;
+	padding: 0px 10px 10px 30px;
+}
+
+nav {
+	float: left;
+	background-color: #90C7E3;
+	width: 220px;
+	position: relative;
+}
+
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+	text-align: left;
+	padding: 10px 10px 10px 20px;
+	background-color: #FFFFFF;
+	margin-left: 230px;
+}
+
+
+
+
+
+nav ul {
+	list-style-type: none;
+	font-size: 1.2em;
+	padding: 0px 0px 10px 20px;
+}
+
+nav a {
+	color: #010032;
+	font-size: 90%;
+	font-weight: 900;
+}
+
+nav a:visited {
+	color: #344873;
+}
+
+nav a:hover {
+	color: #FFFFFF;
+}
+
+nav a:link {
+	text-decoration: none;
+}
+
+
+
+h2 {
+	color: #3399CC;
+	margin: 20px 20px 20px 20px;
+}
+
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+dt {
+	color: #000033;
+}
