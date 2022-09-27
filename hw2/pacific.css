@@ -82,7 +82,7 @@ img {
 nav {
 	float: left;
 	background-color: #90C7E3;
-	width: 220px;
+	width: fixed;
 	position: relative;
 }
 
