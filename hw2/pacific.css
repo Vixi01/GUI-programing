@@ -22,6 +22,7 @@ article {
 
 
 body {
+	/*The outmost box (background)*/
 	background-image: url('ptrbackground.jpg');
 	background-color: #00569f;
 	color: #666666;
@@ -29,6 +30,7 @@ body {
 }
 
 #wrapper {
+	/*The block contain all material*/
 
 	margin: 0px auto 0px auto;
 	min-width: 600px;
@@ -37,6 +39,7 @@ body {
 }
 
 h1 {
+	/*The header block*/
 	background-color: #000033;
 	background-image: url('sunset.jpg');
 	background-repeat: no-repeat;
@@ -48,18 +51,21 @@ h1 {
 }
 
 .resort {
+	/*class resort*/
 	color: #096b9c;
 	font-size: 120%;
 	font-style: bold;
 }
 
 img {
+	/*all image*/
 	float: left;
 	position: relative;
 	margin: 0px 20px 0px 20px;
 }
 
 #content {
+	/*id: content*/
 	background-color: white;
 	margin-left: 230px;
 	padding: 1px 0px 0px 0px;
@@ -76,11 +82,13 @@ img {
 }
 
 #contact {
+	/*id: contact*/
 	font-size: 90%;
 	padding: 0px 10px 10px 30px;
 }
 
 nav {
+	/*The left menu part*/
 	float: left;
 	background-color: #90C7E3;
 	width: fixed;
@@ -88,6 +96,7 @@ nav {
 }
 
 footer {
+	/*footer*/
 	font-family: Georgia, "Times New Roman", serif;
 	text-align: left;
 	padding: 10px 10px 10px 20px;
