@@ -1,0 +1,51 @@
+<!--
+File: new.html
+GUI Assignment: Dynamic Multiplication Table
+Brian Cheng, UMass Lowell Computer Science, Haojen_cheng@student.uml.edu
+What to submit: all program code
+Copyright (c) 2022 by Brian. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Brian on Nov 1, 2022 at 8:30 pM
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Dynamic Multiplication Table</h2>
+
+    <div class="container">
+        <form action="/action_page.php">
+            <!-- the form  -->
+            <label for="fnr">Minimum Row value</label>
+            <input type="text" id="fnr" name="firstNumber">
+
+            <label for="lnr">Maximum Row value</label>
+            <input type="text" id="lnr" name="lastNumber">
+
+            <label for="fnc">Minimum column value</label>
+            <input type="text" id="fnc" name="firstNumber">
+
+            <label for="lnc">Maximum column value</label>
+            <input type="text" id="lnc" name="lastNumber">
+
+            <button class="btn" onClick="removeAlert(); removeTable();Table();" type="submit" form="form1"
+                value="Submit">Submit</button> <!-- button calls the functions  -->
+        </form>
+    </div>
+
+
+    <div id="alert">
+        <p id="notification"></p> <!-- Alert box   -->
+    </div>
+    <script src="my.js"></script>
+
+</body>
+
+</html>
