@@ -1,5 +1,5 @@
 # hw4<br />
 https://vixi01.github.io/GUI-programming/hw4/<br />
-https://vixi01.github.io/GUI-programming/hw4/new.html<br />
-https://vixi01.github.io/GUI-programming/hw4/style.css<br />
-https://vixi01.github.io/GUI-programming/hw4/my.js
+https://vixi01.github.io/GUI-programming/hw4/html/new.html<br />
+https://vixi01.github.io/GUI-programming/hw4/css/<br />
+https://vixi01.github.io/GUI-programming/hw4/js/
