@@ -1,0 +1,135 @@
+/*
+File: style.css
+GUI Assignment: Dynamic Multiplication Table
+Brian Cheng, UMass Lowell Computer Science, Haojen_cheng@student.uml.edu 
+What to submit:all program code
+Copyright (c) 2022 by Brian. All rights reserved. May be freely copied or 
+excerpted for educational purposes with credit to the author. 
+updated by Brian on Nov 1, 2022 at 8:30 pM
+*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=text] {
+    /* input box styling  */
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    /* button styling  */
+    width: 20%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px 15px;
+    margin: 8px 20px;
+    border-radius: 5px;
+}
+
+button[type=delete] {
+    width: 40%;
+    color: white;
+    padding: 15px 15px;
+    margin: 8px 20px;
+    border-radius: 5px;
+    visibility: hidden;
+    position: relative;
+    left: 150px;
+    bottom: 80px;
+
+}
+
+.btn {
+    /* more button styling  */
+    text-decoration: none;
+    border: none;
+    background-color: red;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.btn:active {
+    /* more button styling  */
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+button:hover {
+    /* more button styling  */
+    background-color: orange;
+}
+
+
+div.container {
+    /* the purple box styling */
+    width: 350px;
+    border-radius: 15px;
+    background-color: blueviolet;
+    padding: 20px;
+    display: inline-block;
+}
+
+
+
+
+table {
+    /* the table styling */
+    vertical-align: top;
+    max-width: 350px;
+    max-height: 350px;
+    margin: 10px;
+    background-color: yellow;
+    border-collapse: collapse;
+    display: inline-block;
+    overflow-x: auto;
+}
+
+td {
+    /* the table cell styling */
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+}
+
+.thead {
+    /* table first row and first column styling */
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+#frow {
+    position: sticky;
+    top: 0;
+}
+
+#fcolumn {
+    position: sticky;
+    left: 0;
+}
+
+#odd {
+    /* table odd number row styling */
+    background-color: blue;
+}
+
+p {
+    /* <p> styling */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+form .error {
+    color: #ff0000;
+}
+
+#tabs {
+    visibility: hidden;
+}
