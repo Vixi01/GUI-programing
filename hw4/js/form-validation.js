@@ -70,7 +70,7 @@ $().ready(function () {
         greaterThan: "Please enter number greater or equal to Min value."
       }
     },
-    submitHandler: function (form) {  // call removeTable() and Table()when the form submit
+    submitHandler: function (form) {  // call removeTable() and Table()when the form submit 
       removeTable();
       Table();
     }
