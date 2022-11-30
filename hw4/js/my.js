@@ -4,14 +4,20 @@
 // What to submit: all program code
 // Copyright (c) 2022 by Brian. All rights reserved. May be freely copied or
 // excerpted for educational purposes with credit to the author.
-// updated by Brian on Nov 1, 2022 at 8:30 pM
+// updated by Brian on Nov 30, 2022 at 12:12 AM
 var countTable = 1;
+var cn = 1;
+var fr;
+var lr;
+var fc;
+var lc;
+
 function Table() {
 
-  let fr = document.getElementById("fnr").value; // Getting the input value from form
-  let lr = document.getElementById("lnr").value;
-  let fc = document.getElementById("fnc").value;
-  let lc = document.getElementById("lnc").value;
+  fr = document.getElementById("fnr").value; // Getting the input value from form
+  lr = document.getElementById("lnr").value;
+  fc = document.getElementById("fnc").value;
+  lc = document.getElementById("lnc").value;
 
 
 
@@ -19,9 +25,6 @@ function Table() {
   lr = +lr;
   fc = +fc;
   lc = +lc;
-
-
-
 
 
   var tbl = document.createElement("table"); // start to make the table
@@ -57,85 +60,8 @@ function Table() {
   }
 
 
-  let l = document.createElement("li");
-  l.innerHTML = '<a href=' + "#tabs-" + countTable + '>' + fr + " to " + lr + " by " + fc + " to " + lc + '</a>' + '<span class="ui-icon ui-icon-close" role="presentation">Remove Tab</span>';
-  l.setAttribute("class", "tabsli");
-  $("div#tabs ul").append(
-    l
-  );
-
-  myClone = table.cloneNode(true);
-  let d = document.createElement("div");
-  d.setAttribute("id", "tabs-" + countTable);
-  d.setAttribute("class", "tabsit");
-
-  $("div#tabs").append(
-    d
-  );
-  d.appendChild(myClone);
-
-
-
-  $("div#tabs").tabs("refresh");
-  $("#tabs").tabs({ active: countTable - 1 });
-  countTable = countTable + 1;
-
-  if ($('ul#items li').length >= 1) {
-    $("#tabs").css({
-      'visibility': 'visible'
-    });
-    $(".delete").css({
-      'visibility': 'visible'
-    });
-  }
 }
 
-
-function deleteall() {
-
-  const t = document.querySelectorAll('.tabsit');
-  t.forEach(t => {
-    t.remove();
-  });
-
-  const r = document.querySelectorAll('.tabsli');
-  r.forEach(r => {
-    r.remove();
-  });
-
-  countTable = 1;
-  if (!($('ul#items li').length >= 1)) {
-    $("#tabs").css({
-      'visibility': 'hidden'
-    });
-    $(".delete").css({
-      'visibility': 'hidden'
-    });
-  }
-
-};
-
-$(function () {
-  var tabs = $("#tabs").tabs();
-  tabs.delegate("span.ui-icon-close", "click", function () {
-    var panelId = $(this).closest("li").remove().attr("aria-controls");
-    $("#" + panelId).remove();
-
-
-    countTable = countTable - 1;
-    if (!($('ul#items li').length >= 1)) {
-      $("#tabs").css({
-        'visibility': 'hidden'
-      });
-      $(".delete").css({
-        'visibility': 'hidden'
-      });
-    }
-
-    tabs.tabs("refresh");
-  });
-
-});
 
 function removeTable() // remove the last table
 {
@@ -147,3 +73,77 @@ function removeTable() // remove the last table
 function isFloat(n) {//check is float
   return Number(n) === n && n % 1 !== 0;
 }
+
+function AutoSubmit() { // submit the form if valid
+  if ($("form#inputform").valid() == true) {
+    $("form#inputform").submit();
+  }
+}
+function save() {
+  let table = document.getElementById("myTable");
+  myClone = table.cloneNode(true);
+  createTabs(myClone);
+}
+
+function createTabs(myClone) {  // create a tab with the table
+
+  let l = document.createElement("li");
+  l.innerHTML = '<a href=' + "#tabs-" + cn + '>' + fr + " to " + lr + " by " + fc + " to " + lc + '</a>' + '<input  type="checkbox">';
+  l.setAttribute("name", "tb" + cn);
+  $("div#tabs ul").append(
+    l
+  );
+
+
+  let d = document.createElement("div");
+  d.setAttribute("id", "tabs-" + cn);
+  d.setAttribute("name", "tb" + cn + "n");
+
+  $("div#tabs").append(
+    d
+  );
+  d.appendChild(myClone);
+
+
+
+  $("div#tabs").tabs("refresh");
+  $("#tabs").tabs({ active: countTable - 1 });
+  countTable = countTable + 1;
+  cn = cn + 1;
+  if ($('ul#items li').length >= 1) {
+    $("#tabs").css({
+      'visibility': 'visible'
+    });
+    $(".delete").css({
+      'visibility': 'visible'
+    });
+  }
+}
+$("#tabs").tabs();    // let the plugin tabs to function
+
+
+function deleteall() {  // delete all selet tabs
+
+
+
+  const r = document.querySelectorAll("input[type=checkbox]:checked");
+
+
+  r.forEach(r => {
+    let a = r.parentElement.getAttribute("name");
+    $("[name='" + a + "n" + "']").remove();
+    r.parentElement.remove();
+    countTable = countTable - 1;
+  });
+
+
+  if (!($('ul#items li').length >= 1)) {
+    $("#tabs").css({
+      'visibility': 'hidden'
+    });
+    $(".delete").css({
+      'visibility': 'hidden'
+    });
+  }
+
+};
