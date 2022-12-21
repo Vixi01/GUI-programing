@@ -1,0 +1,143 @@
+function boardTable() {
+  let table = document.getElementById("board");
+  for (let j = 0; j < 15; j++) {
+    let row = table.insertRow(j);
+    for (let i = 0; i < 15; i++) {
+      let t = row.insertCell(i);
+      t.setAttribute("class", "droppable tileBoard");
+      t.setAttribute("id", "row"+i+"_column"+j);
+    }
+  }
+  document.getElementById("row"+0+"_column"+0).setAttribute("class", "triplew droppable tileBoard");
+  document.getElementById("row"+0+"_column"+3).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+3+"_column"+0).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+1+"_column"+1).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+2+"_column"+2).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+3+"_column"+3).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+4+"_column"+4).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+1+"_column"+5).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+5+"_column"+1).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+5+"_column"+5).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+2+"_column"+6).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+6+"_column"+2).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+6+"_column"+6).setAttribute("class", "doublel droppable tileBoard");
+
+  document.getElementById("row"+(14-0)+"_column"+0).setAttribute("class", "triplew droppable tileBoard");
+  document.getElementById("row"+(14-0)+"_column"+3).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+(14-3)+"_column"+0).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+(14-1)+"_column"+1).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+(14-2)+"_column"+2).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+(14-3)+"_column"+3).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+(14-4)+"_column"+4).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+(14-1)+"_column"+5).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+(14-5)+"_column"+1).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+(14-5)+"_column"+5).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+(14-2)+"_column"+6).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+(14-6)+"_column"+2).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+(14-6)+"_column"+6).setAttribute("class", "doublel droppable tileBoard");
+
+  document.getElementById("row"+0+"_column"+(14-0)).setAttribute("class", "triplew droppable tileBoard");
+  document.getElementById("row"+0+"_column"+(14-3)).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+3+"_column"+(14-0)).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+1+"_column"+(14-1)).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+2+"_column"+(14-2)).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+3+"_column"+(14-3)).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+4+"_column"+(14-4)).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+1+"_column"+(14-5)).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+5+"_column"+(14-1)).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+5+"_column"+(14-5)).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+2+"_column"+(14-6)).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+6+"_column"+(14-2)).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+6+"_column"+(14-6)).setAttribute("class", "doublel droppable tileBoard");
+
+  document.getElementById("row"+(14-0)+"_column"+(14-0)).setAttribute("class", "triplew droppable tileBoard");
+  document.getElementById("row"+(14-0)+"_column"+(14-3)).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+(14-3)+"_column"+(14-0)).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+(14-1)+"_column"+(14-1)).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+(14-2)+"_column"+(14-2)).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+(14-3)+"_column"+(14-3)).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+(14-4)+"_column"+(14-4)).setAttribute("class", "doublew droppable tileBoard");
+  document.getElementById("row"+(14-1)+"_column"+(14-5)).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+(14-5)+"_column"+(14-1)).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+(14-5)+"_column"+(14-5)).setAttribute("class", "triplel droppable tileBoard");
+  document.getElementById("row"+(14-2)+"_column"+(14-6)).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+(14-6)+"_column"+(14-2)).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+(14-6)+"_column"+(14-6)).setAttribute("class", "doublel droppable tileBoard");
+
+  document.getElementById("row"+(0)+"_column"+(7)).setAttribute("class", "triplew droppable tileBoard");
+  document.getElementById("row"+(7)+"_column"+(0)).setAttribute("class", "triplew droppable tileBoard");
+  document.getElementById("row"+(14)+"_column"+(7)).setAttribute("class", "triplew droppable tileBoard");
+  document.getElementById("row"+(7)+"_column"+(14)).setAttribute("class", "triplew droppable tileBoard");
+  
+  document.getElementById("row"+(3)+"_column"+(7)).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+(7)+"_column"+(3)).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+(14-3)+"_column"+(14-7)).setAttribute("class", "doublel droppable tileBoard");
+  document.getElementById("row"+(14-7)+"_column"+(14-3)).setAttribute("class", "doublel droppable tileBoard");
+
+  document.getElementById("row"+7+"_column"+7).setAttribute("class", "start doublew droppable tileBoard");
+}
+
+
+function Pdisplay( tile_position, tile) {
+
+  for(let i=0;i<7;i++) {
+    if(document.querySelector("#tile_"+i).children().length == 1)
+    {
+      let a = document.querySelector("#tile_"+i).child.attr('id');
+      strarr[i] = text.pieces[a].letter;
+    }else
+    {
+      strarr[i] = " ";
+    }
+
+  }
+
+  str = strarr.join('');
+
+  if(countWords(str) ==0){
+    str="       ";
+  }else if(countWords(str) ==1){
+    str = strarr.join('');
+  } else {
+    var input = strarr.join('');
+    var R =  /(\w|\s)*\w(?=")|\w+/g;
+    var output = input.match(R);
+    str = output.join('..');
+  }
+
+  document.querySelector("#WordDisplay").innerHTML="<p>Word: "+str+ "   Score:"+Score+"</p>";
+}
+
+<div id="DropBlock" class="droppable"></div>
+
+#DropBlock {
+    width: 300px;
+    height: 150px;
+    margin: 20px 20px;
+    background-color: yellow;
+    
+    display: inline-block;
+}
+  // $(".droppable#DropBlock").droppable({
+  //   tolerance: "pointer",
+  //   drop: function (event, ui) {
+  //     $(ui.draggable).css("top", "");
+  //     $(ui.draggable).css("left", "");
+  //     $(this).append(ui.draggable);
+
+  //     text.pieces[ui.draggable.attr('id')].amount = text.pieces[ui.draggable.attr('id')].amount - 1;
+  //     table();
+  //   }
+  // });
+  
+.triplew {
+    background-color: red;
+}
+
+.triplel {
+    background-color: blue;
+}
+
+.doublel {
+    background-color: rgb(0, 204, 255);
+}

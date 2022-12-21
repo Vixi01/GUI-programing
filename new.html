@@ -1,0 +1,78 @@
+<!--
+File: new.html
+GUI Assignment: Scrabble Table
+Brian Cheng, UMass Lowell Computer Science, Haojen_cheng@student.uml.edu
+What to submit: all program code
+Copyright (c) 2022 by Brian. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Brian on Dec 20, 2022 at 11:02 PM
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div id="container">    
+        <div id="ScoreBoard">
+            <h2>Scrabble Table</h2>
+            <p id="WordDisplay">Word:____ Current Score:0 Highest score:0</p>
+
+            <table id="board">                          <!-- The scrabble table -->
+                <tbody>
+                    <tr>
+                        <td id="tile_0" class="droppable tileBoard" hold="1"></td>
+                        <td id="tile_1" class="doublew droppable tileBoard" hold="2"></td>
+                        <td id="tile_2" class="droppable tileBoard" hold="3"></td>
+                        <td id="tile_3" class="droppable tileBoard" hold="4"></td>
+                        <td id="tile_4" class="droppable tileBoard" hold="5"></td>
+                        <td id="tile_5" class="doublew droppable tileBoard" hold="6"></td>
+                        <td id="tile_6" class="droppable tileBoard" hold="7"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="holder" class="droppable"></div>       <!-- The rack-->
+            <div>                                           <!-- The buttons -->
+                <div class="bt">
+                    <button class="btn" type="Submit" onClick="submit()" disabled="disabled">Submit</button>
+                    <!-- the save button  -->
+                </div>
+
+                <div class="bt">
+                    <button class="btn" type="Restart" onClick="restart()">Restart</button>
+                </div>
+            </div>
+            <div>
+                <table id="t1">                 <!-- The letter remain table-->
+                    <thead>
+                        <tr>
+                            <th colspan="9">Letter Remain</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="../js/my.js"></script>
+</body>
+
+</html>
