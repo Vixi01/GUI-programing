@@ -1,0 +1,192 @@
+/*
+File: style.css
+GUI Assignment: scrabble table
+Brian Cheng, UMass Lowell Computer Science, Haojen_cheng@student.uml.edu 
+What to submit:all program code
+Copyright (c) 2022 by Brian. All rights reserved. May be freely copied or 
+excerpted for educational purposes with credit to the author. 
+updated by Brian on Dec 20, 2022 at 11:02 PM
+*/
+
+#ScoreBoard,
+#DropBlock {
+    display: block;
+}
+
+body {              /*body*/
+    background-color: white;
+}
+
+#ScoreBoard {       /*The container of all block*/
+
+    background-color: aquamarine;
+    width: 600px;
+    height: 600px;
+    margin: 40px 40px;
+    padding: 40px 40px 40px 40px;
+    display: inline-block;
+    position: relative;
+    left: 600px;
+}
+
+h2 {
+    color: plum;
+    text-align: center;
+}
+
+div.bt {                /*both buttons*/
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+button[type=Submit] {   /*submit button*/
+    /* Submit button styling  */
+    width: 70px;
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px 15px;
+    border-radius: 5px;
+
+}
+
+button:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    pointer-events: none;
+}
+
+button:disabled:active {
+    box-shadow: none;
+}
+
+button:disabled:button {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+button[type=Restart] {          /*Restart button*/
+    /* Submit button styling  */
+    width: 70px;
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px 15px;
+    border-radius: 5px;
+}
+
+
+.btn {
+    /* more button styling  */
+    text-decoration: none;
+    border: none;
+    background-color: red;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.btn:active {
+    /* more button styling  */
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+button:hover {
+    /* more button styling  */
+    background-color: orange;
+}
+
+
+
+
+#t1 {                 /* the remain letter table  */
+    /* the table styling */
+    vertical-align: top;
+    max-width: 450px;
+    max-height: 450px;
+    margin: 10px;
+    background-color: white;
+    border-collapse: collapse;
+    display: inline-block;
+}
+
+td {
+    /* the table cell styling */
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    /* the table cell styling */
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+thead {
+    /* table first row and first column styling */
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+#board {            /* Scrabble board*/
+
+    padding: 0px;
+    background-color: black;
+    border-collapse: collapse;
+}
+
+#board tbody td {
+    width: 70px;
+    height: 65px;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+
+
+.tileBoard {        /*normal block of the scrabble board */
+    background-image: url("../data/normal.png");
+    background-size: 70px;
+    background-repeat: no-repeat;
+}
+
+.doublew {            /*double point block of the scrabble board */
+    background-image: url("../data/double_word.png");
+    background-size: 70px;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+#holder {           /*The rack holder */
+    width: 450px;
+    height: 100px;
+    margin: 5px 5px;
+    padding: 25px 25px 25px 25px;
+
+
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-image: url("../data/scrabble-tile-holder-406774_640.png");
+    display: block;
+}
+
+img {
+    width: 45px;
+    height: 46px;
+    margin: 5px;
+}
